@@ -7,7 +7,20 @@
     <title>escape-the-madness</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/main.ts" defer ></script>
+    <script type="module" src="./src/sound.ts" defer ></script>
+
+    <div class="scene mainMenu" id="mainMenu">
+      <div class="container">
+        <button class="changeScene" data-target="intro">Start</button>
+        <button class="soundToggle">Toggle Sound</button>
+      </div>
+    </div>
+
+    <div class="scene intro hidden" id="intro">
+      <div class="container">
+        <button onclick="changeScene('scene1')">Start</button>
+      </div>
+    </div>
   </body>
 </html>
