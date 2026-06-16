@@ -1,4 +1,4 @@
-let soundOn:boolean = true;
+export let soundOn:boolean = true;
 
 const soundButtons = document.querySelectorAll<HTMLButtonElement>("button.soundToggle");
 for (const soundButton of soundButtons) {
