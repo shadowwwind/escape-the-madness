@@ -28,3 +28,13 @@
   height: 100%;
   padding: 15%;
 }
+.intro > .container {
+  background-color: black;
+}
+.intro > .navDiv {
+  position: sticky;
+  z-index: 2;
+  justify-content: end;
+  display: flex;
+  padding-right: 5px;
+}

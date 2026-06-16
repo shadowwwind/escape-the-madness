@@ -18,6 +18,9 @@ function changeScene(scene:scenes) {
     let element:HTMLElement = document.getElementById(scene)!
     console.log(scene)
     element.classList.remove("hidden")
+    if (scene === "intro") {
+        loadIntro()
+    }
 }
 const sceneSwitchers = document.querySelectorAll<HTMLButtonElement>("button.changeScene");
 for (const sceneSwitcher of sceneSwitchers) {
@@ -26,3 +29,16 @@ for (const sceneSwitcher of sceneSwitchers) {
         changeScene(target);
     })
 }
+
+const crawler = document.getElementById("crawl") as HTMLDivElement;
+function loadIntro() {
+    crawler.classList.add("crawl")
+}
+crawler.addEventListener("animationend", () => {
+    changeScene("scene1");
+})
+const skipButton = document.getElementById("skipIntro") as HTMLButtonElement;
+skipButton.addEventListener("click",() => {
+    changeScene("scene1");
+    crawler.classList.remove("crawl");
+})
