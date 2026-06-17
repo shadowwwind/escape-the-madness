@@ -4,6 +4,8 @@ import {soundOn} from "./sound.ts";
 type scenes = "scene1" | "scene2"| "sarg1" | "sarg2" | "mainMenu" | "intro"
 
 let currentPlace:scenes = "mainMenu"
+let brettCollected:boolean = false
+
 function changeScene(scene:scenes) {
     if (currentPlace === "scene1" && soundOn) {
         let audio = new Audio("sounds/Door2.mp3")
@@ -62,3 +64,9 @@ function checkcode() {
 }
 const checkCodeButton = document.getElementById("checkCode") as HTMLButtonElement
 checkCodeButton.addEventListener("click", checkcode)
+
+const scene2Brett = document.getElementById("scene2-brett") as HTMLImageElement
+scene2Brett.addEventListener("click", () => {
+    brettCollected = true;
+    scene2Brett.classList.add("hidden")
+})
