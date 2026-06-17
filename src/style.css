@@ -95,3 +95,9 @@
 .scene3 {
   background-image: url("./assets/zweiter_Raum.png");
 }
+.gitter1 {
+  background-image: url("./assets/Gefangnisraum-Spiegel-ohne-brett-square.png");
+}
+.gitter2 {
+  background-image: url("./assets/Gefangnisraum-Spiegel-mit-brett-square.png");
+}

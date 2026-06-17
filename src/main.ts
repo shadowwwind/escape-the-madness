@@ -1,7 +1,7 @@
 import './style.css'
 import {soundOn} from "./sound.ts";
 
-type scenes = "scene1" | "scene2"| "sarg1" | "sarg2" | "mainMenu" | "intro"
+type scenes = "scene1" | "scene2"| "sarg1" | "sarg2" | "mainMenu" | "intro" | "spiegel" | "gitter1" | "gitter2"
 
 let currentPlace:scenes = "mainMenu"
 let brettCollected:boolean = false
@@ -11,6 +11,15 @@ function changeScene(scene:scenes) {
         let audio = new Audio("sounds/Door2.mp3")
         audio.play()
     }
+    if (scene === "spiegel") {
+        console.log(brettCollected)
+        if (brettCollected) {
+            scene = "gitter2"
+        }else {
+            scene = "gitter1"
+        }
+    }
+
 
     currentPlace = scene
     let htmlScenes = document.getElementsByClassName("scene")
@@ -53,7 +62,7 @@ function checkcode() {
     }
     const tmp = digit.join()
     console.log("try "+tmp)
-    if (tmp === "4,2,4,2") {
+    if (tmp === "1,2,4,2") {
         console.log("pass")
         changeScene('sarg2')
     } else {
