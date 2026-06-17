@@ -5,6 +5,7 @@ type scenes = "scene1" | "scene2"| "sarg1" | "sarg2" | "mainMenu" | "intro" | "s
 
 let currentPlace:scenes = "mainMenu"
 let brettCollected:boolean = false
+let scenesVisited: number = 0
 
 function changeScene(scene:scenes) {
     if (currentPlace === "scene1" && soundOn) {
@@ -19,6 +20,10 @@ function changeScene(scene:scenes) {
             scene = "gitter1"
         }
     }
+    if (scenesVisited > 4 && !brettCollected) {
+        scene2Brett.classList.remove("hidden")
+    }
+    scenesVisited += 1
 
 
     currentPlace = scene
