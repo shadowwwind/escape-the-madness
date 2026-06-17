@@ -6,6 +6,7 @@ type scenes = "scene1" | "scene2"| "sarg1" | "sarg2" | "mainMenu" | "intro" | "s
 let currentPlace:scenes = "mainMenu"
 let brettCollected:boolean = false
 let scenesVisited: number = 0
+const inventoryBrett = document.getElementById("inventory-brett") as HTMLImageElement;
 
 function changeScene(scene:scenes) {
     if (currentPlace === "scene1" && soundOn) {
@@ -69,6 +70,8 @@ function checkcode() {
     console.log("try "+tmp)
     if (tmp === "1,2,4,2") {
         console.log("pass")
+        inventoryBrett.classList.add("hidden")
+
         changeScene('sarg2')
     } else {
         for (let i = 0; i < 4; i++) {
@@ -83,4 +86,5 @@ const scene2Brett = document.getElementById("scene2-brett") as HTMLImageElement
 scene2Brett.addEventListener("click", () => {
     brettCollected = true;
     scene2Brett.classList.add("hidden")
+    inventoryBrett.classList.remove("hidden")
 })

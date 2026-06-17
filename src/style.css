@@ -4,6 +4,7 @@
   animation: fade-out 0.7s ease-out forwards;
 }
 .scene {
+  z-index: 10;
   position:fixed;
   padding:0;
   margin:0;
@@ -168,4 +169,16 @@
   box-shadow:
           inset 0 0 20px rgba(0, 0, 0, 0.9),
           0 2px 5px rgba(0, 0, 0, 0.5);
+}
+#inventory {
+  position: fixed;
+  display: flex;
+  justify-content: right;
+  z-index: 19;
+  bottom: 1px;
+  padding: 10px;
+}
+#inventory-brett {
+  height: 100px;
+  margin-top: auto;
 }
