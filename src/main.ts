@@ -1,6 +1,9 @@
 import './style.css'
 import './intro-text.css'
 import {soundOn} from "./sound.ts";
+import brettOhneZahlen from "../public/assets/brett-ohne.zahlen-3d-2.png"
+import brettMitZahlen from "../public/assets/brett-mit-zahlen.png"
+
 
 type scenes = "scene1" | "scene2"| "sarg1" | "sarg2" | "mainMenu" | "intro" | "spiegel" | "gitter1" | "gitter2"
 
@@ -8,6 +11,7 @@ let currentPlace:scenes = "mainMenu"
 let brettCollected:boolean = false
 let scenesVisited: number = 0
 const inventoryBrett = document.getElementById("inventory-brett") as HTMLImageElement;
+inventoryBrett.src = brettMitZahlen;
 
 function changeScene(scene:scenes) {
     if (currentPlace === "scene1" && soundOn) {
@@ -84,6 +88,7 @@ const checkCodeButton = document.getElementById("checkCode") as HTMLButtonElemen
 checkCodeButton.addEventListener("click", checkcode)
 
 const scene2Brett = document.getElementById("scene2-brett") as HTMLImageElement
+scene2Brett.src = brettOhneZahlen;
 scene2Brett.addEventListener("click", () => {
     brettCollected = true;
     scene2Brett.classList.add("hidden")
