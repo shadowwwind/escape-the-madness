@@ -48,5 +48,25 @@
       </div>
 
     </div>
+    <div class="scene scene2 hidden" id="scene2">
+      <div class="container">
+        <button class="changeScene" data-target="sarg1">Sarg begutachten</button>
+        <button class="changeScene" data-target="scene4">in Verließ gehen</button>
+      </div>
+    </div>
+    <div class="scene sarg1 hidden" id="sarg1">
+      <div class="container">
+        <div>
+          <input id="digit0" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" ><input id="digit1" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" ><input id="digit2" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" ><input id="digit3" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" >
+          <button id="checkCode">Prüfen</button>
+        </div>
+        <button class="changeScene" data-target="scene2">Zurück</button>
+      </div>
+    </div>
+    <div class="scene sarg2 hidden" id="sarg2">
+      <div class="container">
+        <button class="changeScene" data-target="sarg2">ansehen</button>
+      </div>
+    </div>
   </body>
 </html>

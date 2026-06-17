@@ -1,7 +1,7 @@
 import './style.css'
 import {soundOn} from "./sound.ts";
 
-type scenes = "scene1" | "mainMenu" | "intro"
+type scenes = "scene1" | "scene2"| "sarg1" | "sarg2" | "mainMenu" | "intro"
 
 let currentPlace:scenes = "mainMenu"
 function changeScene(scene:scenes) {
@@ -42,3 +42,23 @@ skipButton.addEventListener("click",() => {
     changeScene("scene1");
     crawler.classList.remove("crawl");
 })
+
+
+function checkcode() {
+    let digit = []
+    for (let i = 0; i < 4; i++) {
+        digit[i] = (document.getElementById("digit"+i) as HTMLInputElement).value!;
+    }
+    const tmp = digit.join()
+    console.log("try "+tmp)
+    if (tmp === "4,2,4,2") {
+        console.log("pass")
+        changeScene('sarg2')
+    } else {
+        for (let i = 0; i < 4; i++) {
+            (document.getElementById("digit"+i) as HTMLInputElement).value = ""
+        }
+    }
+}
+const checkCodeButton = document.getElementById("checkCode") as HTMLButtonElement
+checkCodeButton.addEventListener("click", checkcode)

@@ -30,6 +30,11 @@
 }
 .intro > .container {
   background-color: black;
+  justify-content: revert;
+  display:  revert;
+  align-items: revert;
+  height: revert;
+  padding: revert;
 }
 .intro > .navDiv {
   position: sticky;
@@ -47,4 +52,28 @@
   align-items: center;
   height: 100%;
   padding: 15%;
+}
+.scene2 {
+  background-image: url("./assets/entryhall.png");
+}
+.container {
+  justify-content: center;
+  display:  flex;
+  align-items: center;
+  height: 100%;
+  padding: 15%;
+}
+.sarg1 {
+  background-image: url("./assets/Sarg_mit_schlo.png");
+}
+.coffinInput {
+  text-align: center;
+  font-size: xx-large;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+}
+.sarg2 {
+  background-image: url("./assets/offener_sarg_madness.png");
 }
