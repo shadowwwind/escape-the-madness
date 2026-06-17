@@ -20,7 +20,7 @@
   background-size: cover;
 }
 .mainMenu {
-  background-image: url("./assets/Schloss_OG.png");
+  background-image: url("/assets/Schloss_OG.png");
 }
 .mainMenu > .container {
   justify-content: center;
@@ -45,7 +45,7 @@
   padding-right: 5px;
 }
 .scene1 {
-  background-image: url("./assets/Schloss_OG.png");
+  background-image: url("/assets/Schloss_OG.png");
 }
 .scene1 > .container {
   justify-content: center;
@@ -70,7 +70,7 @@
   drop-shadow(0 0 24px rgba(65, 105, 225, 0.5));
 }
 .scene2 {
-  background-image: url("./assets/entryhall.png");
+  background-image: url("../public/assets/entryhall.png");
 }
 .container {
   justify-content: center;
@@ -80,7 +80,7 @@
   padding: 15%;
 }
 .sarg1 {
-  background-image: url("./assets/Sarg_mit_schlo.png");
+  background-image: url("../public/assets/Sarg_mit_schlo.png");
 }
 .coffinInput {
   text-align: center;
@@ -91,16 +91,16 @@
   margin: 5px;
 }
 .sarg2 {
-  background-image: url("./assets/offener_sarg_madness.png");
+  background-image: url("../public/assets/offener_sarg_madness.png");
 }
 .scene3 {
-  background-image: url("./assets/zweiter_Raum.png");
+  background-image: url("../public/assets/zweiter_Raum.png");
 }
 .gitter1 {
-  background-image: url("./assets/Gefangnisraum-Spiegel-ohne-brett-square.png");
+  background-image: url("../public/assets/Gefangnisraum-Spiegel-ohne-brett-square.png");
 }
 .gitter2 {
-  background-image: url("./assets/Gefangnisraum-Spiegel-mit-brett-square.png");
+  background-image: url("../public/assets/Gefangnisraum-Spiegel-mit-brett-square.png");
 }
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 

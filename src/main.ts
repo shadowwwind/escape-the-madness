@@ -1,4 +1,5 @@
 import './style.css'
+import './intro-text.css'
 import {soundOn} from "./sound.ts";
 
 type scenes = "scene1" | "scene2"| "sarg1" | "sarg2" | "mainMenu" | "intro" | "spiegel" | "gitter1" | "gitter2"
