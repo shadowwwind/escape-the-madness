@@ -38,3 +38,13 @@
   display: flex;
   padding-right: 5px;
 }
+.scene1 {
+  background-image: url("./assets/Schloss_OG.png");
+}
+.scene1 > .container {
+  justify-content: center;
+  display:  flex;
+  align-items: center;
+  height: 100%;
+  padding: 15%;
+}
