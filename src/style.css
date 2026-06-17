@@ -36,9 +36,9 @@
   height: revert;
   padding: revert;
 }
-.intro > .navDiv {
-  position: sticky;
-  z-index: 2;
+.navDiv {
+  position: fixed;
+  z-index: 20;
   justify-content: end;
   display: flex;
   padding-right: 5px;
@@ -100,4 +100,72 @@
 }
 .gitter2 {
   background-image: url("./assets/Gefangnisraum-Spiegel-mit-brett-square.png");
+}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.gothic-board-btn {
+  /* Font styling to mimic the digital seven-segment look */
+  font-family: 'Orbitron', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  /* Glowing cyan text effect */
+  color: #a3fff4;
+  text-shadow:
+          0 0 5px rgba(34, 233, 203, 0.6),
+          0 0 15px rgba(34, 233, 203, 0.4),
+          0 0 30px rgba(34, 233, 203, 0.2);
+
+  /* Dimensions and spacing */
+  padding: 20px 60px;
+  cursor: pointer;
+  position: relative;
+
+  /* Background: Mimics the dark, aged teal wood/stone palette */
+  background: radial-gradient(circle, #204144 0%, #112426 100%);
+
+  /* Stylized comic-style border */
+  border: 4px solid #0d1a1b;
+  box-shadow:
+          inset 0 0 15px rgba(0, 0, 0, 0.8), /* Inner shadow for depth */
+          0 4px 10px rgba(0, 0, 0, 0.5);      /* Outer drop shadow */
+
+  /* Smooth transition for hover effects */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Subtle wood-grain frame overlay using pseudo-elements */
+.gothic-board-btn::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+/* Hover State: Makes the numbers and inner chamber "light up" */
+.gothic-board-btn:hover {
+  background: radial-gradient(circle, #295357 0%, #112426 100%);
+  color: #e0ffff;
+  text-shadow:
+          0 0 8px rgba(34, 233, 203, 0.9),
+          0 0 25px rgba(34, 233, 203, 0.7),
+          0 0 45px rgba(34, 233, 203, 0.4);
+  box-shadow:
+          inset 0 0 10px rgba(34, 233, 203, 0.2),
+          0 0 20px rgba(34, 233, 203, 0.3),
+          0 6px 15px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Active State: Button press feel */
+.gothic-board-btn:active {
+  transform: translateY(1px);
+  box-shadow:
+          inset 0 0 20px rgba(0, 0, 0, 0.9),
+          0 2px 5px rgba(0, 0, 0, 0.5);
 }

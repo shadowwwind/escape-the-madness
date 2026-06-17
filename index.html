@@ -13,14 +13,14 @@
 
     <div class="scene mainMenu" id="mainMenu">
       <div class="container">
-        <button class="changeScene" data-target="intro">Start</button>
-        <button class="soundToggle">Toggle Sound</button>
+        <button class="changeScene gothic-board-btn" data-target="intro">Start</button>
+        <button class="soundToggle gothic-board-btn">Toggle Sound</button>
       </div>
     </div>
 
     <div class="scene intro hidden" id="intro">
       <div class="navDiv">
-        <button id="skipIntro">Skip</button>
+        <button id="skipIntro" class="gothic-board-btn">Skip</button>
       </div>
       <div class="container">
 
@@ -44,7 +44,7 @@
     </div>
     <div class="scene scene1 hidden" id="scene1">
       <div class="container">
-        <button class="changeScene" data-target="scene2">Enter</button>
+        <button class="changeScene gothic-board-btn" data-target="scene2">Eintreten</button>
       </div>
 
     </div>
@@ -56,13 +56,16 @@
       </div>
     </div>
     <div class="scene sarg1 hidden" id="sarg1">
+      <div class="navDiv">
+        <button class="changeScene gothic-board-btn" data-target="scene2">Zurück</button>
+      </div>
       <div class="container">
         <div>
           <input id="digit0" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" ><input id="digit1" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" ><input id="digit2" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" ><input id="digit3" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" >
           <button id="checkCode">Prüfen</button>
         </div>
-        <button class="changeScene" data-target="scene2">Zurück</button>
       </div>
+
     </div>
     <div class="scene sarg2 hidden" id="sarg2">
       <div class="container">
@@ -70,19 +73,26 @@
       </div>
     </div>
     <div class="scene scene3 hidden" id="scene3">
+      <div class="navDiv">
+        <button class="changeScene gothic-board-btn" data-target="scene2">zurück gehen</button>
+      </div>
+
       <div class="container">
         <button class="changeScene" data-target="spiegel">Spiegel begutachten</button>
-        <button class="changeScene" data-target="scene2">zurück gehen</button>
       </div>
     </div>
     <div class="scene gitter1 hidden" id="gitter1">
+      <div class="navDiv">
+        <button class="changeScene gothic-board-btn" data-target="scene3">zurück</button>
+      </div>
       <div class="container">
-        <button class="changeScene" data-target="scene3">zurück gehen</button>
       </div>
     </div>
     <div class="scene gitter2 hidden" id="gitter2">
+      <div class="navDiv">
+        <button class="changeScene gothic-board-btn" data-target="scene3">zurück</button>
+      </div>
       <div class="container">
-        <button class="changeScene" data-target="scene3">zurück gehen</button>
       </div>
     </div>
   </body>
