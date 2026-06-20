@@ -2,6 +2,7 @@ import type {scenes} from "./main.ts";
 import mainDooreSound from "../public/assets/Door1cut.mp3"
 import openCoffinSound from "../public/assets/coffincut.mp3"
 import mantionNight from "../public/assets/224_Mansion_Night.mp3"
+import squishSound from "../public/assets/floraphonic-slime-squish-5-218569.mp3"
 
 export let soundOn:boolean = true;
 export let musicOn:boolean = true;
@@ -9,7 +10,11 @@ export let musicOn:boolean = true;
 
 const soundButtons = document.querySelectorAll<HTMLButtonElement>("button.soundToggle");
 const musicButtons = document.querySelectorAll<HTMLButtonElement>("button.musicToggle");
+const squishButtons = document.querySelectorAll<HTMLButtonElement>("button.squishSound");
 
+for (const squishButton of squishButtons) {
+    squishButton.addEventListener("click", playSquish)
+}
 for (const soundButton of soundButtons) {
     soundButton.addEventListener("click", toggleSounds)
 }
@@ -69,5 +74,15 @@ export function playSoundSceneSwitch(oldScene:scenes, newScene:scenes) {
 let backgroundMusic = new Audio(mantionNight)
 backgroundMusic.volume  = 0.5
 document.getElementById("startButton")?.addEventListener("click", () => {
-    backgroundMusic.play()
+    if (musicOn) {
+        backgroundMusic.play()
+    }
 })
+
+const squishButtonSound = new Audio(squishSound)
+squishButtonSound.volume = 0.3
+function playSquish() {
+    if (soundOn) {
+        squishButtonSound.play()
+    }
+}

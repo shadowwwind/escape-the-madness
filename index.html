@@ -16,16 +16,16 @@
 
     <div class="scene mainMenu" id="mainMenu">
       <div class="container">
-        <button class="changeScene gothic-board-btn" data-target="intro" id="startButton" >Start</button>
-        <button class="soundToggle gothic-board-btn">Sound ist an</button>
-        <button class="musicToggle gothic-board-btn">Musik ist an</button>
+        <button class="squishSound changeScene gothic-board-btn" data-target="intro" id="startButton" >Start</button>
+        <button class="squishSound soundToggle gothic-board-btn">Sound ist an</button>
+        <button class="squishSound musicToggle gothic-board-btn">Musik ist an</button>
 
       </div>
     </div>
 
     <div class="scene intro hidden" id="intro">
       <div class="navDiv">
-        <button id="skipIntro" class="gothic-board-btn">Skip</button>
+        <button id="skipIntro" class="squishSound gothic-board-btn">Skip</button>
       </div>
       <div class="container">
 
@@ -63,7 +63,7 @@
     </div>
     <div class="scene scene1 hidden" id="scene1">
       <div class="container">
-        <button class="changeScene gothic-board-btn" data-target="scene2">Eintreten</button>
+        <button class=" changeScene gothic-board-btn" data-target="scene2">Eintreten</button>
       </div>
 
     </div>
@@ -76,12 +76,12 @@
     </div>
     <div class="scene sarg1 hidden" id="sarg1">
       <div class="navDiv">
-        <button class="changeScene gothic-board-btn" data-target="scene2">Zurück</button>
+        <button class="changeScene gothic-board-btn squishSound" data-target="scene2">Zurück</button>
       </div>
       <div class="container">
         <div>
           <input id="digit0" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" ><input id="digit1" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" ><input id="digit2" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" ><input id="digit3" class="coffinInput" type="text" maxlength="1" pattern="[0-9]" >
-          <button id="checkCode">Prüfen</button>
+          <button id="checkCode" class="squishSound">Prüfen</button>
         </div>
       </div>
 
