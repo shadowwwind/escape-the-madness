@@ -1,11 +1,10 @@
 import './style.css'
 import './intro-text.css'
-import {soundOn} from "./sound.ts";
+import {playSoundSceneSwitch} from "./sound.ts";
 import brettOhneZahlen from "../public/assets/brett-ohne.zahlen-3d-2.png"
 import brettMitZahlen from "../public/assets/brett-mit-zahlen.png"
 
-
-type scenes = "scene1" | "scene2"| "sarg1" | "sarg2" | "mainMenu" | "intro" | "spiegel" | "gitter1" | "gitter2"
+export type scenes = "scene1" | "scene2"| "sarg1" | "sarg2" | "mainMenu" | "intro" | "spiegel" | "gitter1" | "gitter2"
 
 let currentPlace:scenes = "mainMenu"
 let brettCollected:boolean = false
@@ -14,10 +13,7 @@ const inventoryBrett = document.getElementById("inventory-brett") as HTMLImageEl
 inventoryBrett.src = brettMitZahlen;
 
 function changeScene(scene:scenes) {
-    if (currentPlace === "scene1" && soundOn) {
-        let audio = new Audio("sounds/Door2.mp3")
-        audio.play()
-    }
+    playSoundSceneSwitch(currentPlace,scene)
     if (scene === "spiegel") {
         console.log(brettCollected)
         if (brettCollected) {
