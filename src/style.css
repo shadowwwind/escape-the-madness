@@ -116,6 +116,12 @@
   width: 19%;
   height: 63%;
 }
+.ansehen{
+  top: 39%;
+  left: 48%;
+  width: 32%;
+  height: 34%;
+}
 .scene2 {
   background-image: url("../public/assets/entryhall.png");
 }
@@ -148,6 +154,10 @@
 }
 .gitter2 {
   background-image: url("../public/assets/Gefangnisraum-Spiegel-mit-brett-square.png");
+}
+.wuffi {
+  background-image: url("../public/assets/Wuffi.png");
+
 }
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
