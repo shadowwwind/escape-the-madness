@@ -12,14 +12,22 @@
     justify-content: center;
     position: relative;
     height: 800px;
-    color: #ffffff;
-    font-family: sans-serif;
     font-size: 500%;
     font-weight: 600;
     letter-spacing: 6px;
     line-height: 150%;
     perspective: 400px;
     text-align: justify;
+
+    font-family: 'Orbitron', monospace;
+
+    /* Glowing cyan text effect */
+    color: #a3fff4;
+    text-shadow:
+            0 0 5px rgba(34, 233, 203, 0.6),
+            0 0 15px rgba(34, 233, 203, 0.4),
+            0 0 30px rgba(34, 233, 203, 0.2);
+
 }
 
 .crawl {
