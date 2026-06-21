@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Alternatives-UnGroup"; /* set name */
+    src: url("/assets/TTF Alternatives UnGroup/JMH Cthulhumbus UG.ttf"); /* url of the font */
+}
 .fade {
     position: relative;
     width: 100%;
@@ -19,7 +23,7 @@
     perspective: 400px;
     text-align: justify;
 
-    font-family: 'Orbitron', monospace;
+    font-family: 'Alternatives-UnGroup','Orbitron', monospace;
 
     /* Glowing cyan text effect */
     color: #a3fff4;

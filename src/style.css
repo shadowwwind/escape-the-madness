@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Alternatives-UnGroup"; /* set name */
+  src: url("/assets/TTF Alternatives UnGroup/JMH Cthulhumbus UG.ttf"); /* url of the font */
+}
 .hidden,
 [hidden] {
   display: none !important;
@@ -71,7 +75,7 @@
 }
 .glow-invisible {
   position: fixed;
-  font-family: 'Orbitron', monospace;
+  font-family: , monospace;
   font-size: 1.0rem;
   font-weight: 700;
   letter-spacing: 4px;
@@ -163,7 +167,7 @@
 
 .gothic-board-btn {
   /* Font styling to mimic the digital seven-segment look */
-  font-family: 'Orbitron', monospace;
+  font-family: 'Alternatives-UnGroup','Orbitron', monospace;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 4px;
@@ -294,7 +298,7 @@
 }
 .gothic-board-input {
   /* Font styling to mimic the digital seven-segment look */
-  font-family: 'Orbitron', monospace;
+  font-family: 'Alternatives-UnGroup','Orbitron', monospace;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 4px;
